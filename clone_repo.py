@@ -34,7 +34,7 @@ def download_github_repo(repo_url: str) -> str:
 
     # Choose a base directory under user's Downloads (Windows-friendly), fallback to temp
     try:
-        downloads = Path("")
+        downloads = Path(r"codehub/repos/")
         base_dir = downloads if downloads.exists() else Path(tempfile.gettempdir())
     except Exception:
         base_dir = Path(tempfile.gettempdir())
