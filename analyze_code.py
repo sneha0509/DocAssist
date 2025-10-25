@@ -7,8 +7,8 @@ from datetime import datetime
 from typing import Tuple, List, Dict, Optional
 
 # -------- CONFIG --------
-REPO_DIR = r"C:\AI\DocAssist\working\ai-docreviewer"  # change to your repo folder
-OUTPUT_JSON = r"C:\AI\DocAssist\result\metadata.json"
+REPO_DIR = r"codehub/destination/final-year-project"  # change to your repo folder
+OUTPUT_JSON = r"codehub/extract/destination_metadata.json"
 
 # File types we will process
 LANG_BY_EXT = {

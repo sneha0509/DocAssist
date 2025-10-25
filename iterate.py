@@ -164,8 +164,9 @@ def copy_code_files(src_repo_dir: str, working_root: str) -> str:
 
 if __name__ == "__main__":
     # --- CHANGE PATHS if needed ---
-    SRC_DIR = r"C:\AI\DocAssist\final-year-project_repo_1"
-    WORKING_ROOT = r"C:\AI\DocAssist\working"
-
+    SRC_DIR = r"C:\AI\DocAssist\codehub\repos\final-year-project_repo_6"
+    #WORKING_ROOT = r"C:\AI\DocAssist\working"
+    WORKING_ROOT = r"codehub/destination"
     dest = copy_code_files(SRC_DIR, WORKING_ROOT)
     print(f"Code files copied to: {dest}")
+    

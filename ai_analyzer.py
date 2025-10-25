@@ -1,7 +1,7 @@
 import os
 from openai import AzureOpenAI
 
-def analyse_metadata():
+def analyse_metadata(output_file: str, SRC_DIR: str):
     # Environment variables for Azure OpenAI
     endpoint = os.getenv("ENDPOINT_URL")
     deployment = os.getenv("DEPLOYMENT_NAME")
@@ -15,7 +15,7 @@ def analyse_metadata():
     )
 
     # Read metadata content
-    SRC_DIR = r"result\metadata.json"
+    
     with open(SRC_DIR, "r", encoding="utf-8") as file:
         metadata_content = file.read()
 
@@ -49,13 +49,20 @@ def analyse_metadata():
     )
 
     # Write response to TXT file
-    output_file = r"result\documentation_output.txt"
+    
     with open(output_file, "w", encoding="utf-8") as out_file:
         for choice in completion.choices:
-            print("Response:", choice.message.content)  # Console output
+           # print("Response:", choice.message.content)  # Console output
             out_file.write(choice.message.content + "\n\n")  # Save to file
 
     print(f"Documentation written to: {output_file}")
 
+
+
+def main():
+        output_file = r"codehub/documents/generated_documentation.txt"
+        SRC_DIR = r"codehub/extract/destination_metadata.json"
+        analyse_metadata(output_file,SRC_DIR)
+
 if __name__ == "__main__":
-    analyse_metadata()
+    main()

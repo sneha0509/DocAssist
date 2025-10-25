@@ -1,4 +1,4 @@
-1. clone the repo localy. -- clone_repo*
-2. iterate over the files and identify the essentials filesg --iterate*
-3. extract meta data using pygments --analyze_code.py
-4. documenting the metadata json file in text format. --ai_analyzer.py*
+1. clone the repo localy. -- clone_repo*--codehub/repos
+2. iterate over the files and identify the essentials filesg --iterate*---codehub/destination
+3. extract meta data using pygments --analyze_code.py---codehub/extract
+4. documenting the metadata json file in text format. --ai_analyzer.py*--codehub/documents
