@@ -68,8 +68,7 @@ def intial_setup():
 
 
 def main():
-    repo_url = "https://github.com/Ak55073/Bharatiya"
-    
+    repo_url=input("Enter the GitHub repository URL: ")
     # Use a raw string literal for Windows paths
     intial_setup()
     # 1) If you want to derive the folder name from a fresh clone, uncomment:
